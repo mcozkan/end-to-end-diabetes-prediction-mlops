@@ -1,0 +1,28 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+jupyterlab
+
+# Model persistence
+joblib
+
+# API
+fastapi
+uvicorn
+
+# Configuration
+python-dotenv
+
+# Validation
+pydantic
+
+# Testing
+pytest
+
+# Code quality
+ruff
+
+# Experiment tracking (ileride)
+mlflow

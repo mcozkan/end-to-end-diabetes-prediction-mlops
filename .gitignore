@@ -1,0 +1,50 @@
+
+*.pyc
+
+# Environment
+.env
+.env.*
+!.env.example
+
+#Data files
+*.csv
+
+
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual env
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Local data
+data/raw/*.csv
+data/processed/
+
+# ML artifacts
+models/
+artifacts/
+
+# DVC local cache
+.dvc/cache/git 
+
+# Docker
+postgres-data/
