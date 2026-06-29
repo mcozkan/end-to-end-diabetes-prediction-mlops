@@ -9,15 +9,14 @@ load_dotenv()
 POSTGRES_CONNECTION_STRING = os.getenv("POSTGRES_CONNECTION_STRING")
 if POSTGRES_CONNECTION_STRING is None:
     raise ValueError("POSTGRES_CONNECTION_STRING is not set in the .env variables.")
-else:
-    print(f"POSTGRES_CONNECTION_STRING: {POSTGRES_CONNECTION_STRING}")
+
+
+# Define an engine in order to start connection
+engine = create_engine(POSTGRES_CONNECTION_STRING, echo = True)
 
 # define a function to create the database and tables
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
-
-# Define an engine in order to start connection
-engine = create_engine(POSTGRES_CONNECTION_STRING, echo = True)
 
 # start connection engine :
 def get_db():
